@@ -24,9 +24,4 @@ class SoundManager {
     
      sounds.get(id).play(); 
   }
-  
-  public void playRandomBlip(){
-    int i = (int)random(0,2);
-    playSound("blip-" + i);
-  }
 }

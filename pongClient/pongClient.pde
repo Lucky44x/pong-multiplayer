@@ -19,7 +19,7 @@ int[] ballPos = new int[] {400, 250};
 SoundManager soundMan;
 
 //_____________________ DIESE IP ZUR SERVER IP ÄNDERN _____________________\\
-String ip = "127.0.0.1";
+String ip = "094.199.211.100";
 
 //Das hier Ignorieren
 class rgb {
@@ -52,7 +52,7 @@ void draw() {
       return;
     }
     else if(data[0] == 3){
-       soundMan.playRandomBlip(); 
+       soundMan.playSound("blip-" + data[1]);
     }
 
     if (controlling == -1) {
