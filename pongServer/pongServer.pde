@@ -161,12 +161,14 @@ void gameLogic(){
     if(ballPos[0] + 5 >= width-50){
       if(ballPos[1] + 5 <= yS[1] + gr && ballPos[1] - 5 >= yS[1]){
            ballVel[0] *= -1;
+           _server.write(new byte[]{3});
            if(moving[1] == 1){ballVel[0] *= 1.2;}
       }
     }
     if(ballPos[0] - 5 <= 60){
       if(ballPos[1] + 5 <= yS[0] + gr && ballPos[1] - 5 >= yS[0]){
            ballVel[0] *= -1; 
+            _server.write(new byte[]{3});
            if(moving[0] == 1){ballVel[0] *= 1.2;}
       } 
     }
