@@ -20,6 +20,7 @@ SoundManager soundMan;
 
 //_____________________ DIESE IP ZUR SERVER IP ÄNDERN _____________________\\
 String ip = "094.199.211.100";
+String ipa = "127.0.0.1";
 
 //Das hier Ignorieren
 class rgb {
@@ -39,7 +40,7 @@ void setup() {
   frameRate(25);
   soundMan = new SoundManager();
   soundMan.loadFiles();
-  _client1 = new Client(this, ip, 12044);
+  _client1 = new Client(this, ip, 5204);
   _client1.write(new byte[]{1});
 }
 

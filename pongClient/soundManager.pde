@@ -8,7 +8,7 @@ class SoundManager {
     }
       
     File[] allFiles = folder.listFiles(new FilenameFilter(){
-       public boolean accept(File dir, String name) {println(name); return name.toLowerCase().endsWith(".wav");} 
+       public boolean accept(File dir, String name) {return name.toLowerCase().endsWith(".wav");} 
     });
     
     for(File f : allFiles){
@@ -17,11 +17,6 @@ class SoundManager {
   }
   
   public void playSound(String id){
-    
-     for(String k : sounds.keySet()){
-        println(k); 
-     }
-    
      sounds.get(id).play(); 
   }
 }
